@@ -11,8 +11,17 @@
       border-style: inset;
       padding: 12px;
      }
-     td,tr.resume-table{
-       background-color:SlateBlue;
+     .resume-table th {
+       background-color: rgb(25, 25, 112);
+     }
+     .resume-table tr {
+       background-color: DimGray;
+     }
+     .resume-table tr:nth-child(even) {
+       background-color: SlateBlue;
+     }
+     .resume-table tr:hover {
+       background-color: rgb(25, 25, 112);
      }
      html {
       scroll-behavior: smooth;
@@ -90,7 +99,7 @@
       <h2>Resume</h2>
       <p>Summary of my CV</p>
       <div class="w3-container w3-responsive">
-        <table class = "resume-table" style="border-collapse: collapse; border: 2px solid; background-color: rgb(25, 25, 112)">
+        <table class = "resume-table" style="border-collapse: collapse; border: 2px solid">
           <tr>
             <th>Year</th>
             <th>Title/Program</th>
