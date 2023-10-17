@@ -26,6 +26,22 @@
      html {
       scroll-behavior: smooth;
      }
+     #popup-window {
+        border-radius: 25px;
+        border: 2px solid darkblue;
+        padding: 20px; 
+        width: 300px;
+        height: 200px;       
+        position: fixed;
+        background: white;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        display: none;
+     }   
   </style>
 </head>
 <body class="w3-content" style="max-width:1300px">
@@ -105,7 +121,7 @@
             <th>Title/Program</th>
             <th>Where</th>
           </tr>
-          <tr>
+          <tr href="#" id="popup-link">
             <td>June 2022-August 2022</td>
             <td>Research Internship: Cybersecurity in a Multidisciplinary Environment</td>
             <td>Old Dominion University, Norfolk, Virginia</td>
@@ -124,6 +140,11 @@
       </div>
     </div>
   </div>
+  <div id="popup-window">
+    <h1>Pop-up Window</h1>
+    <p>This is a pop-up window.</p>
+    <button id="close-button">Close</button>
+  </div> 
 </div>
 
 <!-- Third Grid: Swing By & Contact -->
@@ -166,5 +187,17 @@
 <!-- Footer -->
 <footer class="w3-container w3-black w3-padding-16">
 </footer>
+<script>
+  var popupLink = document.getElementById("popup-link");
+  var popupWindow = document.getElementById("popup-window");
+  var closeButton = document.getElementById("close-button");
+  popupLink.addEventListener("click", function(event) {
+    event.preventDefault();
+    popupWindow.style.display = "block";
+  });
+  closeButton.addEventListener("click", function() {
+    popupWindow.style.display = "none";
+  });
+</script> 
 </body>
 </html>
