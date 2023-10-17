@@ -2,38 +2,38 @@
     font-family: Century Gothic;
 }
 td, th, tr.resume-table {
-    border: 6px solid  rgb(70, 130, 180);
-    border-style: inset;
-    padding: 12px;
-}
+   border: 6px solid  rgb(70, 130, 180);
+   border-style: inset;
+   padding: 12px;
+  }
 .resume-table th {
     background-color: rgb(25, 25, 112);
-}
+  }
 .resume-table tr {
     background-color: DimGray;
-}
+  }
 .resume-table tr:nth-child(even) {
     background-color: SlateBlue;
-}
+  }
 .resume-table tr:hover {
     background-color: rgb(25, 25, 112);
-}
+  }
 html {
-    scroll-behavior: smooth;
-}
+   scroll-behavior: smooth;
+  }
 #popup-window {
-    border-radius: 25px;
-    border: 2px solid darkblue;
-    padding: 20px; 
-    width: 300px;
-    height: 200px;       
-    position: fixed;
-    background: white;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    display: none;
-}
+     border-radius: 25px;
+     border: 2px solid darkblue;
+     padding: 20px; 
+     width: 300px;
+     height: 200px;       
+     position: fixed;
+     background: white;
+     margin: auto;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     z-index: 10;
+     display: none;
+} 

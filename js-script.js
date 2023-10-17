@@ -6,7 +6,7 @@ for(let i = 0; i < popupLinks.length; i++){
     event.preventDefault();
     popupWindow.style.display = "block";
   });
-  closeButton.addEventListener("click", function() {
-    popupWindow.style.display = "none";
-  });
 }
+closeButton.addEventListener("click", function() {
+    popupWindow.style.display = "none";
+});
