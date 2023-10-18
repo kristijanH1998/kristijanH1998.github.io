@@ -22,6 +22,13 @@ function openWindow(popupWindow){
   overlay.classList.add("active");
 }
 
+overlay.addEventListener("click", () => {
+	const windows = document.querySelectorAll(".popup-window.active");
+  windows.forEach(window => {
+  	closeWindow(window);
+  });
+});
+
 function closeWindow(popupWindow){
 	if(popupWindow == null) return;
   popupWindow.classList.remove("active");
