@@ -1,12 +1,29 @@
-const popupLinks = document.getElementsByClassName("popup-links");
-var popupWindow = document.getElementById("popup-window");
-var closeButton = document.getElementById("close-button");
-for(let i = 0; i < popupLinks.length; i++){
-  popupLinks[i].addEventListener("click", function(event) {
-    event.preventDefault();
-    popupWindow.style.display = "block";
-  });
-}
-closeButton.addEventListener("click", function() {
-    popupWindow.style.display = "none";
+const openPopupWindowButtons = document.querySelectorAll("[data-popupwindow-target]");
+const closePopupWindowButtons = document.querySelectorAll("[data-close-button]");
+const overlay = document.getElementById("overlay");
+
+openPopupWindowButtons.forEach(button => {
+	button.addEventListener("click", () => {
+  	const popupWindow = document.querySelector(button.dataset.popupwindowTarget);
+    openWindow(popupWindow);
+  })
 });
+
+closePopupWindowButtons.forEach(button => {
+	button.addEventListener("click", () => {
+  	const popupWindow = button.closest(".popup-window");
+    closeWindow(popupWindow);
+  })
+});
+
+function openWindow(popupWindow){
+	if(popupWindow == null) return;
+  popupWindow.classList.add("active");
+  overlay.classList.add("active");
+}
+
+function closeWindow(popupWindow){
+	if(popupWindow == null) return;
+  popupWindow.classList.remove("active");
+  overlay.classList.remove("active");
+}

@@ -84,7 +84,7 @@
             <th>Title/Program</th>
             <th>Where</th>
           </tr>
-          <tr href="#" class="popup-links">
+          <tr data-popupwindow-target="#popup-window">
             <td>June 2022-August 2022</td>
             <td>Research Internship: Cybersecurity in a Multidisciplinary Environment</td>
             <td>Old Dominion University, Norfolk, Virginia</td>
@@ -103,13 +103,24 @@
       </div>
     </div>
   </div>
-  <div id="popup-window">
-    <h1>Pop-up Window</h1>
-    <p>This is a pop-up window.</p>
-    <button id="close-button">X</button>
-  </div> 
-</div>
+  
+  
+  
+  
+  <div class="popup-window" id="popup-window">
+    <div class="popup-window-header">
+      <div class="title">Description</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="popup-window-body">Some text...</div>
+  </div>
+  <div id="overlay"></div>
 
+
+
+
+
+</div>
 <!-- Third Grid: Swing By & Contact -->
 <div class="w3-row" id="contact">
   <div class="w3-half w3-container w3-center" style="height:700px; background-color:rgb(178, 34, 34); color:white">
