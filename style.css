@@ -10,7 +10,7 @@ td, th, tr.resume-table {
   background-color: rgb(47, 79, 79);
 }
 .resume-table tr {
-  background-color: DimGray;
+  background-color: rgb(174, 174, 174);
 }
 .resume-table tr:nth-child(even) {
   background-color: SlateBlue;
