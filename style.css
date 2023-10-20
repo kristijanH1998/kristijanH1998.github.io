@@ -1,78 +1,82 @@
 *, h1 {
-    font-family: Century Gothic;
+  font-family: Century Gothic;
 }
 td, th, tr.resume-table {
-   border: 6px solid  rgb(70, 130, 180);
-   border-style: inset;
-   padding: 12px;
-  }
+ border: 6px solid  rgb(70, 130, 180);
+ border-style: inset;
+ padding: 12px;
+}
 .resume-table th {
-    background-color: rgb(25, 25, 112);
-  }
+  background-color: rgb(25, 25, 112);
+}
 .resume-table tr {
-    background-color: DimGray;
-  }
+  background-color: DimGray;
+}
 .resume-table tr:nth-child(even) {
-    background-color: SlateBlue;
-  }
+  background-color: SlateBlue;
+}
 .resume-table tr:hover {
-    background-color: rgb(25, 25, 112);
-  }
+  background-color: rgb(25, 25, 112);
+}
 html {
-   scroll-behavior: smooth;
-  }
+ scroll-behavior: smooth;
+}
 .popup-window {
-  position:fixed;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%) scale(0);
-  transition: 200ms ease-in-out;
-  border: 1px solid black;
-  border-radius: 10px;
-  z-index: 10;
-  background-color: white;
-  width: 500px;
-  max-width: 80%;
+position:fixed;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%) scale(0);
+transition: 200ms ease-in-out;
+border: 1px solid black;
+border-radius: 10px;
+z-index: 10;
+background-color: white;
+width: 500px;
+max-width: 80%;
 } 
 
 .popup-window.active {
-  transform: translate(-50%,-50%) scale(1);
+transform: translate(-50%,-50%) scale(1);
 }
 
 .popup-window-header{
-  padding: 10px 15px;
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid black;
+padding: 10px 15px;
+display:flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid black;
 }
 .popup-window-header .title {
-  font-size: 1.25rem;
-  font-weight: bold;
+font-size: 1.25rem;
+font-weight: bold;
 }
 .popup-window-header .close-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 1.25rem;
-  font-weight: bold;
+cursor: pointer;
+border: none;
+outline: none;
+background: none;
+font-size: 1.25rem;
+font-weight: bold;
 }
 .popup-window-body {
-  padding: 10px 15px;
+padding: 10px 15px;
 }
 #overlay{
-  position: fixed;
-  opacity: 0;
-  transition: 200ms ease-in-out;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, .5);
-  pointer-events: none;
+position: fixed;
+opacity: 0;
+transition: 200ms ease-in-out;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, .5);
+pointer-events: none;
 }
 #overlay.active {
-  opacity: 1;
-  pointer-events: all;
+opacity: 1;
+pointer-events: all;
+}
+#resume-popup-3 li {
+margin-bottom: 5px;
+padding-left: 1px;
 }
