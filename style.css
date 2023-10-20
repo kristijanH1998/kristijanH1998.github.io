@@ -1,3 +1,6 @@
+body {
+  background-image: url("cool-background.png");
+}
 *, h1 {
   font-family: Century Gothic;
 }
