@@ -1,6 +1,8 @@
 body {
-  background-image: url("cool-background.png");
-  background-size: cover;
+  background-image: url('cool-background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
 }
 *, h1 {
   font-family: Century Gothic;
