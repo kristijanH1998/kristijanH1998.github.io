@@ -190,13 +190,15 @@
           <label>Message</label>
           <input class="w3-input" style="width:100%;" type="text" required name="Message">
         </div>
-        <button type="submit" class="w3-button w3-teal w3-right">Send</button>
-      </form>
+        
+        
+        
         <div onload="generate()">
-          <div id="user-input" class="inline">
+          <div id="user-input" class="inline" >
               <input type="text"
                     id="submit"
-                    placeholder="Captcha code" />
+                    placeholder="Captcha code"
+                    required name="captcha input"/>
           </div>
       
           <div class="inline" onclick="generate()">
@@ -213,6 +215,10 @@
       
           <p id="key"></p>
         </div>
+        
+        <a class="w3-button w3-teal w3-right" href = "mailto:kristijan.hornung1@gmail.com" type="submit">Send</a>
+      </form>
+        
     </div>
   </div>
 </div>
