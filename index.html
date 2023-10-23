@@ -16,6 +16,7 @@
 "sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
         crossorigin="anonymous">
     <script src="captcha.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body class="w3-content" style="max-width:1300px">
 
@@ -127,7 +128,6 @@
 <span>&#8226;</span> Presented results to 20 IT experts at Virginia Modeling, Analysis, and Simulation Center.
       </div>
   </div>
- 
   
   <div class="popup-window" id="popup-window2">
     <div class="popup-window-header">
@@ -177,7 +177,7 @@
     <div class="w3-padding-64 w3-padding-large" style="text-align:center">
       <h1>Contact</h1>
       <p class="w3-opacity">SEND ME A MESSAGE</p>
-      <form class="w3-container w3-card w3-padding-32 w3-white" action="/action_page.php" target="_blank">
+      <form class="w3-container w3-card w3-padding-32 w3-white" action="mailto:kristijan.hornung1@gmail.com" method="post" enctype="text/plain">
         <div class="w3-section">
           <label>Name</label>
           <input class="w3-input" style="width:100%;" type="text" required name="Name">
@@ -189,16 +189,14 @@
         <div class="w3-section">
           <label>Message</label>
           <input class="w3-input" style="width:100%;" type="text" required name="Message">
-        </div>
-        
-        
+        </div>        
         
         <div onload="generate()">
           <div id="user-input" class="inline" >
               <input type="text"
                     id="submit"
                     placeholder="Captcha code"
-                    required name="captcha input"/>
+                    required/>
           </div>
       
           <div class="inline" onclick="generate()">
@@ -216,7 +214,7 @@
           <p id="key"></p>
         </div>
         
-        <a class="w3-button w3-teal w3-right" href = "mailto:kristijan.hornung1@gmail.com" type="submit">Send</a>
+        <input class="w3-button w3-teal w3-right" type="submit" href="mailto:kristijan.hornung1@gmail.com"value="Send">
       </form>
         
     </div>
