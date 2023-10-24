@@ -14,7 +14,7 @@ function generate() {
 
 	// Generate captcha for length of
 	// 5 with random character
-	for (let i = 1; i < 5; i++) {
+	for (let i = 1; i <= 5; i++) {
 		uniquechar += randomchar.charAt(
 			Math.random() * randomchar.length)
 	}

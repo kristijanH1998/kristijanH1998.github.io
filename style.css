@@ -1,37 +1,3 @@
-#image{
-	margin-top: 10px;
-	width: 100px;
-	font-weight: 400;
-	padding-bottom: 0px;
-	height: 40px;
-	user-select: none;
-	text-decoration:wavy line-through underline;
-	font-style: italic;
-	font-size: x-large;
-  color: white;
-	border: #343a40 2px solid;
-	margin-left: 10px;
-  background-color: #343a40;
-	
-}
-#user-input{
-	width:auto;
-	margin-right: 10px;
-	padding: 10px;
-	padding-bottom: 0px;
-	height: 40px;
-}
-input{
-	border:3px #343a40 solid;
-}
-.inline{
-	display:inline-block;
-}
-#btn{
-	color: aqua;
-	margin: 10px;
-	background-color: brown;
-}
 body {
   background-image: url('cool-background.png');
   background-repeat: no-repeat;
