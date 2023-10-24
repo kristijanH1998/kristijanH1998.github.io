@@ -28,10 +28,10 @@ html {
  scroll-behavior: smooth;
 }
 .popup-window {
-position:fixed;
-top:50%;
-left:50%;
-transform: translate(-50%,-50%) scale(0);
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(0);
 transition: 200ms ease-in-out;
 border: 1px solid black;
 border-radius: 10px;
@@ -42,12 +42,12 @@ max-width: 80%;
 } 
 
 .popup-window.active {
-transform: translate(-50%,-50%) scale(1);
+transform: translate(-50%, -50%) scale(1);
 }
 
 .popup-window-header{
 padding: 10px 15px;
-display:flex;
+display: flex;
 justify-content: space-between;
 align-items: center;
 border-bottom: 1px solid black;
@@ -75,7 +75,7 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background-color: rgba(0, 0, 0, .5);
+background-color: rgba(0, 0, 0, 0.5);
 pointer-events: none;
 }
 #overlay.active {

@@ -1,34 +1,31 @@
 #image{
-	margin-top: 10px;
 	width: 100px;
 	font-weight: 400;
-	padding-bottom: 0px;
+
 	height: 40px;
 	user-select: none;
-	text-decoration:wavy line-through underline;
+	text-decoration: wavy line-through underline;
 	font-style: italic;
 	font-size: x-large;
-  color: white;
+	color: white;
 	border: #343a40 2px solid;
-	margin-left: 10px;
-  background-color: #343a40;
-	
+	background-color: #343a40;
 }
 #user-input{
-	width:auto;
-	margin-right: 10px;
-	padding: 10px;
-	padding-bottom: 0px;
+	width: auto;
 	height: 40px;
 }
 input{
-	border:3px #343a40 solid;
+	border: 3px #343a40 solid;
 }
 .inline{
-	display:inline-block;
+	display: inline-block;
+  margin-top: 10px;
+  padding-bottom: 0px;
+  margin-left: 10px;
+	margin-right: 10px;
+  vertical-align: bottom;
 }
-#btn{
-	color: aqua;
-	margin: 10px;
-	background-color: brown;
+.btn{
+	margin-top: 20px;
 }
