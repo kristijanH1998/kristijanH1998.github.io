@@ -1,3 +1,6 @@
+window.onload = (event) =>{
+    generate();
+};
 let captcha;
 function generate() {
 
