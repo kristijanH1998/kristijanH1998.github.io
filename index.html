@@ -192,10 +192,11 @@
         </div>        
         
         <div onload="generate()">
-          <div id="user-input" class="inline" >
+          <div id="user-input" class="inline">
               <input type="text"
                     id="submit"
-                    placeholder="Captcha code"
+                    placeholder="Please verify your identity"
+                    class="rounded"
                     required/>
           </div>
       
@@ -204,17 +205,17 @@
           </div>
       
           <div id="image"
-              class="inline"
+              class="rounded"
               selectable="False">
           </div>
           <input type="submit"
-                id="btn"
+                class="btn btn-dark"
                 onclick="printmsg()" />
       
           <p id="key"></p>
         </div>
         
-        <input class="w3-button w3-teal w3-right" type="submit" href="mailto:kristijan.hornung1@gmail.com"value="Send">
+        <input class="btn btn-dark" type="submit" href="mailto:kristijan.hornung1@gmail.com"value="Send">
       </form>
         
     </div>
