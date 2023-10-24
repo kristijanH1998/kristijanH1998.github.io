@@ -5,7 +5,7 @@
 	padding-bottom: 0px;
 	height: 40px;
 	user-select: none;
-	text-decoration:line-through;
+	text-decoration:wavy line-through underline;
 	font-style: italic;
 	font-size: x-large;
   color: white;
