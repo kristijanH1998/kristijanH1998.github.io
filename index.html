@@ -89,7 +89,7 @@
     <div class="w3-padding-64 w3-center">
       <h1>Resume</h1>
       <p>Summary of my CV <br>
-        Note: click on each row for more information</p>
+      Note: click on each row for more information</p>
       <div class="w3-container w3-responsive">
         <table class = "resume-table" style="border-collapse: collapse; border: 2px solid">
           <tr>
@@ -178,7 +178,7 @@
     <div class="w3-padding-64 w3-padding-large" style="text-align:center">
       <h1>Contact</h1>
       <p class="w3-opacity">SEND ME A MESSAGE</p>
-      <form class="w3-container w3-card w3-padding-32 w3-white" action="mailto:kristijan.hornung1@gmail.com" method="post" enctype="text/plain">
+      <form class="w3-container w3-card w3-padding-32 w3-white" action="mailto:kristijan.hornung1@gmail.com" method="post" enctype="text/plain" onsubmit="disableSendBtn()">
         <div class="w3-section">
           <label>Name</label>
           <input class="w3-input" style="width:100%;" type="text" required name="Name">
@@ -197,8 +197,7 @@
               <input type="text"
                     id="submit"
                     placeholder="Please verify your identity"
-                    class="rounded inline"
-                    required/>
+                    class="rounded inline"/>
           </div>
       
           <div class="inline" onclick="generate()">
@@ -209,14 +208,14 @@
               class="inline rounded"
               selectable="False">
           </div>
-          <input type="submit"
+          <input value="Verify"
                 class="btn btn-dark"
                 onclick="printmsg()" />
       
           <p id="key"></p>
         </div>
         
-        <input class="btn btn-dark" type="submit" href="mailto:kristijan.hornung1@gmail.com" value="Send">
+        <input class="btn btn-dark" id="send-btn" type="submit" href="mailto:kristijan.hornung1@gmail.com" value="Send">
       </form>
         
     </div>

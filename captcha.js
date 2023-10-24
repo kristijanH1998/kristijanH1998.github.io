@@ -1,9 +1,9 @@
 window.onload = (event) =>{
     generate();
+    document.getElementById("send-btn").disabled = true;
 };
 let captcha;
 function generate() {
-
 	// Clear old input
 	document.getElementById("submit").value = "";
 
@@ -35,6 +35,7 @@ function printmsg() {
 	if (usr_input == captcha.innerHTML) {
 		let s = document.getElementById("key")
 			.innerHTML = "Matched";
+    document.getElementById("send-btn").disabled = false;
 		generate();
 	}
 	else {
@@ -42,4 +43,7 @@ function printmsg() {
 			.innerHTML = "not Matched";
 		generate();
 	}
+}
+function disableSendBtn(){
+	document.getElementById("send-btn").disabled = true;
 }

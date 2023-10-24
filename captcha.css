@@ -1,15 +1,15 @@
 #image{
 	width: 100px;
 	font-weight: 400;
-
 	height: 40px;
 	user-select: none;
 	text-decoration: wavy line-through underline;
 	font-style: italic;
 	font-size: x-large;
-	color: white;
+  color: white;
 	border: #343a40 2px solid;
-	background-color: #343a40;
+  background-color: #343a40;
+	
 }
 #user-input{
 	width: auto;
