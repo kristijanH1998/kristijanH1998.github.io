@@ -25,21 +25,21 @@ body {
   font-family: Century Gothic;
 }
 td, th, tr.resume-table {
- border: 6px solid  rgb(70, 130, 180);
+ border: 6px solid  rgba(70, 130, 180, 0.75);
  border-style: inset;
  padding: 12px;
 }
 .resume-table th {
-  background-color: rgb(47, 79, 79);
+  background-color: rgba(47, 79, 79, 0.75);
 }
 .resume-table tr {
-  background-color: rgb(85, 107, 47);
+  background-color: rgba(85, 107, 47, 0.75);
 }
 .resume-table tr:nth-child(even) {
-  background-color: rgb(65, 105, 225);
+  background-color: rgba(65, 105, 225, 0.75);
 }
 .resume-table tr:hover {
-  background-color: rgb(25, 25, 112);
+  background-color: rgba(25, 25, 112, 0.75);
 }
 .popup-window {
 position: fixed;
