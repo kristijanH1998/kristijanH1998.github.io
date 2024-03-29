@@ -21,13 +21,14 @@ body {
       background-position: 0% 50%;
   }
 }
-*, h1 {
-  font-family: Century Gothic;
+* {
+  font-family: Inter, Helvetica;
 }
 td, th, tr.resume-table {
- border: 6px solid  rgba(70, 130, 180, 0.75);
- border-style: inset;
- padding: 12px;
+  padding: 12px;
+}
+.resume-table {
+  border-collapse: separate;
 }
 .resume-table th {
   background-color: rgba(47, 79, 79, 0.75);
@@ -41,6 +42,11 @@ td, th, tr.resume-table {
 .resume-table tr:hover {
   background-color: rgba(25, 25, 112, 0.75);
 }
+.list-group > a:hover {
+  background-color: rgba(25, 25, 112, 0.75);
+  color:white;
+}
+
 .popup-window {
 position: fixed;
 top: 50%;
@@ -99,4 +105,10 @@ pointer-events: all;
 .resume-popup-3 li {
 margin-bottom: 5px;
 padding-left: 1px;
+}
+
+.list-group > a{
+  background-color:rgba(102, 51, 153, 0.75);
+  margin: 1px;
+  color: white;
 }

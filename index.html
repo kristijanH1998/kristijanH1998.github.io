@@ -5,7 +5,10 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel='stylesheet' type='text/css' href='w3-style.css'>
 <link rel='stylesheet' type='text/css' href='style.css'>
 <link rel="stylesheet"
@@ -54,36 +57,22 @@
 
 <!-- Second Grid: Work & Resume -->
 <div class="w3-row">
-  <div class="w3-half w3-center" style="min-height:800px; background-color:rgba(65, 105, 225, .75)" id="work">
+  <div class="w3-half w3-center d-flex flex-column" style="min-height:800px; background-color:rgba(65, 105, 225, .75)" id="work">
     <div class="w3-padding-64" style="color:white">
       <h1>My Portfolio</h1>
       <p>Some of my latest projects</p>
     </div>
-    <div class="w3-row">
+    <div class="w3-row d-flex justify-content-center">
       <div class="w3-half">
-        <img src="big-data.png" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <img src="/w3images/workbench.jpg" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-row w3-hide-small">
-      <div class="w3-half">
-        <img src="/w3images/workbench.jpg" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <img src="/w3images/coffee.jpg" style="width:100%">
+        <div class="list-group">
+          <a href="space-invaders-game.html" class="list-group-item list-group-item-action border-0">Space Invaders Game</a>
+          <a href="helium-network-analysis.html" class="list-group-item list-group-item-action border-0">Helium Network Blockchain Analysis and Big Data Mining</a>
+          <a href="business-communication-platform.html" class="list-group-item list-group-item-action border-0">Business Communication Platform</a>
+          <a href="rest-gui-java-app.html" class="list-group-item list-group-item-action border-0">REST GUI Java Application</a>
+          <a href="mysql-database.html" class="list-group-item list-group-item-action border-0">MySQL Relational Database</a>
+        </div>
       </div>
     </div>
-
-    <div class="w3-row w3-hide-small">
-      <div class="w3-half">
-        <img src="/w3images/sound.jpg" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <img src="/w3images/workbench.jpg" style="width:100%">
-      </div>
-    </div><br>
   </div>
   <div class="w3-half w3-container" style="min-height:800px; background-color:rgba(102, 51, 153, 0.75); color:white">
     <div class="w3-padding-64 w3-center">
@@ -91,23 +80,28 @@
       <p>Summary of my CV <br>
       Note: click on each row for more information</p>
       <div class="w3-container w3-responsive">
-        <table class = "resume-table" style="border-collapse: collapse; border: 2px solid">
+        <table class = "resume-table">
           <tr>
             <th>Year</th>
             <th>Title/Program</th>
             <th>Where</th>
           </tr>
           <tr data-popupwindow-target="#popup-window1">
+            <td>October 2023 - Present</td>
+            <td>Software Development Intern</td>
+            <td>Bay Valley Tech, Modesto, California</td>
+          </tr>
+          <tr data-popupwindow-target="#popup-window2">
             <td>June 2022 - August 2022</td>
             <td>Research Internship: Cybersecurity in a Multidisciplinary Environment</td>
             <td>Old Dominion University, Norfolk, Virginia</td>
           </tr>
-          <tr data-popupwindow-target="#popup-window2">
+          <tr data-popupwindow-target="#popup-window3">
             <td>December 2020 - January 2021</td>
             <td>Software Development Camp</td>
             <td>Bay Valley Tech, Modesto, California</td>
           </tr>
-          <tr data-popupwindow-target="#popup-window3">
+          <tr data-popupwindow-target="#popup-window4">
             <td>August 2018 - December 2022</td>
             <td>Bachelor of Science in Computer Science</td>
             <td>California State University, Stanislaus (Turlock,California)</td>
@@ -122,15 +116,28 @@
       <div class="title">Description</div>
       <button data-close-button class="close-button">&times;</button>
     </div>
+    <div class="popup-window-body"> 
+      <span>&#8226;</span> Digital skills training program in frontend and backend development technologies: HTML/CSS, JavaScript, React, Node.js, Bootstrap, MySQL, PHP. <br />
+      <span>&#8226;</span> Built 2 mobile-friendly frontend web applications in HTML/CSS/JavaScript: animated and secure Login UI website with responsive design and user password authentication, and a responsive email messaging application with high level of interactivity. Utilized VS Code, Bootstrap, and Node.js. <br />
+      <span>&#8226;</span> Working on software projects and assisting instructors in teaching students, evaluating assignments and projects, preparing course materials. <br />
+      <span>&#8226;</span> Leading a study group of 7 students, and providing them with additional instructions, debugging assistance, and coding project guidance. <br />
+    </div>
+  </div>
+
+  <div class="popup-window" id="popup-window2">
+    <div class="popup-window-header">
+      <div class="title">Description</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
     <div class="popup-window-body"> <span>&#8226;</span> Conducted Big Data mining and in-depth research on economics and network traffic of the Helium Network, a distributed IoT network. <br />
-<span>&#8226;</span> Used Python (libraries: NumPy, Matplotlib, JSON, Pickle) and Helium Blockchain API to access the Blockchain's database and collect data on network traffic and cryptocurrency data mining statistics. <br />
-<span>&#8226;</span> Modeled the data trends over the previous year to discover that Helium at the time had low data packet transfer rates between hotspots and was not yet fully established as an IoT network. <br />
-<span>&#8226;</span> Wrote a research paper titled “Economics of the Helium Network: User Demand and Network Traffic”. <br />
-<span>&#8226;</span> Presented results to 20 IT experts at Virginia Modeling, Analysis, and Simulation Center.
-      </div>
+      <span>&#8226;</span> Used Python (libraries: NumPy, Matplotlib, JSON, Pickle) and Helium Blockchain API to access the Blockchain's database and collect data on network traffic and cryptocurrency data mining statistics. <br />
+      <span>&#8226;</span> Modeled the data trends over the previous year to discover that Helium at the time had low data packet transfer rates between hotspots and was not yet fully established as an IoT network. <br />
+      <span>&#8226;</span> Wrote a research paper titled “Economics of the Helium Network: User Demand and Network Traffic”. <br />
+      <span>&#8226;</span> Presented results to 20 IT experts at Virginia Modeling, Analysis, and Simulation Center.
+    </div>
   </div>
   
-  <div class="popup-window" id="popup-window2">
+  <div class="popup-window" id="popup-window3">
     <div class="popup-window-header">
       <div class="title">Description</div>
       <button data-close-button class="close-button">&times;</button>
@@ -139,7 +146,7 @@
   </div>
   
   
-  <div class="popup-window" id="popup-window3">
+  <div class="popup-window" id="popup-window4">
     <div class="popup-window-header">
       <div class="title">Description</div>
       <button data-close-button class="close-button">&times;</button>
