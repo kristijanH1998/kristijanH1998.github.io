@@ -59,8 +59,9 @@ z-index: 10;
 background-color: white;
 width: 30%;
 max-width: 80%;
+height: auto;
 max-height: 75%;
-overflow: scroll;
+overflow: auto;
 } 
 
 .popup-window.active {
