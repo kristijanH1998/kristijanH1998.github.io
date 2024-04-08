@@ -57,10 +57,10 @@ border: 1px solid black;
 border-radius: 10px;
 z-index: 10;
 background-color: white;
-width: 30%;
-max-width: 80%;
+width: auto;
+max-width: 75vh;
 height: auto;
-max-height: 75%;
+max-height: 75vh;
 overflow: auto;
 } 
 
