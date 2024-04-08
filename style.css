@@ -57,8 +57,10 @@ border: 1px solid black;
 border-radius: 10px;
 z-index: 10;
 background-color: white;
-width: 500px;
+width: 30%;
 max-width: 80%;
+max-height: 75%;
+overflow: scroll;
 } 
 
 .popup-window.active {
