@@ -57,7 +57,7 @@ border: 1px solid black;
 border-radius: 10px;
 z-index: 10;
 background-color: white;
-width: auto;
+width: 50vh;
 max-width: 75vh;
 height: auto;
 max-height: 75vh;
