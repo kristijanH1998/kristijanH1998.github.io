@@ -28,8 +28,8 @@ body {
   }
   
   .carousel-img {
-    height: 32rem;
-    width: 64rem;
+    max-height: 32rem;
+    max-width: 64rem;
   }
 
   /* MARKETING CONTENT
