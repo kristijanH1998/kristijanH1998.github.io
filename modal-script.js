@@ -1,20 +1,28 @@
-// Get the modal
-var modal = document.getElementById("myModal");
+// Get modals
+var modals = document.getElementsByClassName("modal");
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
+// Fill arrays of view buttons, modal images, caption texts, and close button span elements
+var views = document.getElementsByClassName("view");
+var modalImgs = document.getElementsByClassName("modalImg");
+var captionTexts = document.getElementsByClassName("caption");
+var spans = document.getElementsByClassName("close");
+
+//for every modal image...
+for(let i = 0; i < modalImgs.length; i++){
+    views[i].onclick = function(){
+        //when 'view' button is clicked, open image modal
+        modals[i].style.display = "block";
+        modalImgs[i].src = document.getElementsByClassName("myImgs")[i].src;
+        captionTexts[i].innerHTML = document.getElementsByClassName("myImgs")[i].alt;
+    }
+    // Get the <span> element that closes the modal
+    // When the user clicks on <span> (x), close the modal
+    spans[i].onclick = function() { 
+        modals[i].style.display = "none";
+    }
 }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
-}
+
+
+
