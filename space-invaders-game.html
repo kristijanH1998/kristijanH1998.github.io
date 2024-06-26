@@ -27,12 +27,24 @@ p {font-size: 20px;}
   color: white;
   cursor: pointer;
   padding: 15px;
-  border-radius: 4px;
+  
 }
 #myBtn:hover {
   background-color: #555;
 }
-a {
+#playBtn {
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(102, 51, 153);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  margin: 30px;
+  position: relative;
+  left: 30px;
+}
+a:has(.caption){
     text-decoration: none;
     color: rgb(33, 37, 41);
 }
@@ -129,8 +141,12 @@ a {
   </div>
 </div>
 <div class="w3-main">
-  <div class="w3-row w3-padding-64">
+  <div class="w3-row w3-padding-top-64">
     <div class="w3-twothird w3-container">
+      <a href="https://space-invaders-game-kh.netlify.app/">
+        <button id="playBtn" title="Play the Game">Play Online on Netlify</button>
+      </a>
+      <p><strong>Note: to see the source code and read a more detailed story about the project, including how to run the game on local machine, game rules and explanation of how to use the app, and potential future work on this project, consult the README file on the project's <a href="https://github.com/kristijanH1998/module-2-js-final-project-kristijan-hornung.git">GitHub Repository</a></strong></p>
       <h1 class="w3-text-teal">Description</h1>
       <ul>
         <li><p>2D Space Invaders game web app built in JavaScript, HTML and CSS with Bootstrap framework</p></li>
@@ -142,6 +158,18 @@ a {
       </ul>
     </div>
   </div>
+  <div class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Challenges</h1>
+      <ul>
+        <li><p>z-index bug involving objects on the canvas, I fixed this by properly ordering the processing of object arrays in the animate() function, which is the main animation function for the game</p></li>
+        <li><p>bugs with asteroid count increase, fixed by introducing a new variable asteroidCount to act as an upper limit to random asteroid object generation at each level increase, asteroidCount increased as level went up</p></li>
+        <li><p>bug that prevented Boss2’s outer projectiles to reach bottom of canvas; fixed by separating the laser class from outer boss projectile classes and processing them in animate() function separately</p></li>
+        <li><p>bug that allowed user to start the game with 0 or undefined number of lives, by selecting New Game, skipping difficulty selection by clicking on Main Menu button, and then starting a new game again; fixed by making it required for the user to select difficulty before game animation is initiated, by disabling the Continue button from appearing until difficulty has been selected</p></li>
+        <li><p>bug that froze the application when boss2's laser shot the player, fixed by making the whole game animation stop immediately when the player loses all lives, unlike previous solution that would stop the animation 2 seconds after player loses all lives -> this required a change of timeout value in setTimeout for gameOver() function</p></li>
+      </ul>
+    </div>
+  </div>
   <div class="w3-row">
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Motivation</h1>
@@ -150,12 +178,21 @@ a {
       </ul>
     </div>
   </div>
-  <div class="w3-row w3-padding-64">
+  <div class="w3-row w3-padding-top-32">
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">What I Learned</h1>
       <ul>
         <li><p>Making video games like Space Invaders with various effects, animations, and potentially quite a lot of details is not as hard and complex a task as it may seem at first to end users who simply use the app without knowing its technical details</p></li>
         <li><p>It is important to be patient with yourself and show understanding for your own errors, progress challenges, and occasional lack of motivation or fear of failing - all these things are normal and are best overcome by simply starting to work and not thinking much about results</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Developer Log and Other Supporting Content</h1>
+      <ul>
+        <li><p>Online sources used to develop this project as well as the Developer Log can be found <a href="https://docs.google.com/document/d/171uDnwOZFgw6h3zi3xp7hASAzlEwYrx0jgkx9Fazk8Q/edit?usp=sharing">here</a></p></li>
+        <li><p>Wireframe, user interface sketches, user stories, and other Minimum Viable Product (MVP) specifics of the project can be found <a href="https://docs.google.com/document/d/1VeEgH00csnvOBaKuZdmgckT4FxvP5jnptT_1OXHD_ck/edit?usp=sharing">here</a></p></li>
       </ul>
     </div>
   </div>
