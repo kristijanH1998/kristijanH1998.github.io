@@ -32,7 +32,7 @@ p {font-size: 20px;}
 #myBtn:hover {
   background-color: #555;
 }
-a {
+a:has(.caption){
     text-decoration: none;
     color: rgb(33, 37, 41);
 }
@@ -139,23 +139,52 @@ a {
 <div class="w3-main">
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1 class="w3-text-teal">Description</h1>
+      <ul>
+        <li><p>Big Data mining and in-depth research on economic demand and network traffic of the Helium Network, a distributed and decentralized Internet of Things (IoT) network, which runs on a digital ledger of transactions called the Blockchain, with native cryptocurrency abbreviated as "HNT". Since Helium Blockchain is a public blockchain, data on all past transactions on the network is visible to the public</p></li>
+        <li><p>This research uses Python scripts with HTTP requests to Helium Blockchain API to access the Blockchain's database and collect data on network traffic and HNT cryptocurrency data mining statistics, to study Helium network's dynamics, economic supply and demand</p></li>
+        <li><p>Programming environment chosen for this project was Anaconda with Jupyter Notebook</p></li>
+        <li><p>Requests Python library was used to send HTTP requests to fetch data from the blockchain, Matplotlib library was used to represent the data in either numerical tables or visually as graphs, Numpy library helped with its tools for array manipulation, JSON was used to store data in a readable form, Time and Datetime libraries were utilized to work with time parameters, and finally Pickle was used for converting output objects into byte streams, stored in .pkl files for further analysis</p></li>
+        <li><p>The demand for the Helium network's coverage was analyzed by observing two relevant variables: HNT rewards to hotspots for various network services, and overall data traffic on the network</p></li>
+      </ul>
     </div>
   </div>
   <div class="w3-row">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1 class="w3-text-teal">Challenges</h1>
+      <ul>
+        <li><p>A significant problem that appeared during the project were computational limits of the personal machine I used at that time to fetch, store, and process all the data I needed to perform my study. Some scripts took entire nights to finish since data for 8 cities over a period of up to 1 year had to be analyzed, and each city's total network transaction data would sometimes take hours to be fully processed. I ended up getting help from my mentor who used another machine (which had more RAM capacity and faster CPU) and fetched the data I needed, stored it as .pkl files, and sent them to me for further analysis</p></li>
+        <li><p>Another obstacle I experienced in the beginning of this research was having to understand how to use cursor logic within my scripts for sending consecutive HTTP requests to fetch serialized data that came from weeks, sometimes months of transactions between hotspots on the network. This was the only way to fetch all data for entire time intervals that were studied</p></li>
+      </ul>
+      </div>
+  </div>
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Motivation</h1>
+      <ul>
+        <li><p>I set on a course of this project to gain research experience related to my discipline, and learn more about big data and how data analysis can be performed with the help of programming languages</p></li>
+      </ul>
     </div>
   </div>
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1 class="w3-text-teal">What I Learned</h1>
+      <ul>
+        <li><p>From this project I learned what things like Blockchain, Internet of Things, Decentralized Networks, Hotspots, Cryptocurrency Mining and other such terms mean and how they relate to what I already know about existing Internet technologies and digital networks</p></li>
+        <li><p>By conducting this research I got a lot of experience programming in Python, and using its libraries for connecting to external APIs, and to perform data collection, processing, representation, and visualization</p></li>
+        <li><p>And finally this internship taught me how to write scientific papers, perform scientific inquiry by using digital tools, interpret data collected with observed variables in mind, and draw conclusions about the topic under study</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Research Paper, Poster, Presentation</h1>
+      <ul>
+        <li><p><a href="https://github.com/kristijanH1998/REU-Summer-Internship.git">GitHub repository link</a></p></li>
+        <li><p>The paper I wrote for this research study can be found on <a href="https://docs.google.com/document/d/1e3eJWykSwqRAiOo_efxFnnfB9gEqLwgV/edit?usp=sharing&ouid=118036694644451906663&rtpof=true&sd=true">this link</a></p></li>
+        <li><p>The poster I made for this project can be found on <a href="https://docs.google.com/presentation/d/1L2tvWKAIFjRoeVKj8vxawBlwEcLpBivB/edit?usp=sharing&ouid=118036694644451906663&rtpof=true&sd=true">this link</a></p></li>
+        <li><p>The slides for the final presentation I gave at the end of the internship program can be accessed from <a href="https://docs.google.com/presentation/d/1EP9JSGx_IGVwyFztLyxRJESCElC5qrW9DdnMKnJ87qU/edit?usp=sharing">this link</a></p></li>
+      </ul>
     </div>
   </div>
   <footer id="myFooter">
