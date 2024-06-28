@@ -12,8 +12,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
-p {font-size: 20px;}
+html,body,h1,h2,h3,h4,h5,h6,button {font-family: Inter, Helvetica;}
+p, li {font-size: 20px;}
 #myBtn {
   display: none;
   position: fixed;
@@ -23,11 +23,10 @@ p {font-size: 20px;}
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: rgb(102, 51, 153);
   color: white;
   cursor: pointer;
   padding: 15px;
-  border-radius: 4px;
 }
 #myBtn:hover {
   background-color: #555;
@@ -35,9 +34,9 @@ p {font-size: 20px;}
 .thumbnail img {
     max-height: 650px;
 }
-a {
-    text-decoration: none;
-    color: rgb(33, 37, 41);
+a:has(.caption) {
+  text-decoration: none;
+  color: rgb(33, 37, 41);
 }
 </style>
 </head>
@@ -166,23 +165,55 @@ a {
 <div class="w3-main">
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1 class="w3-text-teal">Description</h1>
+      <ul>
+        <li><p>Responsive email template and design made in JavaScript/HTML/CSS with Bootstrap framework and CSS Flexbox method</p></li> 
+        <li><p>Visual Studio Code was used for code editing and Git for version control</p></li>  
+        <li><p>This is a front-end web email application with interactivity that allows users to browse various email message categories (in folders such as Inbox, Tagged, Drafts, etc.), write new messages with specified recipient and subject, reply to messages in each folder, toggle the vertical navigation bar, and search for messages in the search bar. All this can be done with maximum level of responsiveness to changes in screen size, and all components are vertically scrollable</p></li>
+        <li><p>This application is entirely responsive and supports mobile device view, tablet/half screen view, and fullscreen desktop view (for PCs)</p></li>
+      </ul>
     </div>
   </div>
   <div class="w3-row">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1 class="w3-text-teal">Challenges</h1>
+      <ul>
+        <li><p>The hardest part of making the HTML code structure was to make the template fully responsive for 3 different screen sizes using Bootstrap breakpoint classes, while at the same time maintaining functionality of toggle buttons, as well as the scrollable property of message list container and main message container</p></li>
+        <li><p>Vertical navigation bar and its toggle property initially caused bugs on tablet and phone screen sizes, and it was particularly difficult to make extra small screen size (phone) template display only one container, be it message list container, main message container, or the vertical navigation bar as folder selection menu</p></li>
+      </ul>
     </div>
   </div>
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1 class="w3-text-teal">Motivation</h1>
+      <ul>
+        <li><p>I made this project to learn more about creating responsive webpages with Bootstrap, and also to improve my front-end development skills in JS/HTML/CSS</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">What I Learned</h1>
+      <ul>
+        <li><p>This project taught me how to use Bootstrap breakpoint classes to make design components responsive to screens for different devices</p></li>
+        <li><p>I also learned a lot about making user interfaces (UIs) as part of frontend development</p></li>
+        <li><p>Coming back to the project a couple months after it was finished, I realized that I can apply DRY (Don't Repeat Yourself) principle to the script.js by replacing repetitive .onclick event listener code for each button in the vertical navigation bar (for each message folder) with a more abstract single for loop that creates a click listener for all of those buttons, and opens corresponding sections for message list and message container. This optimization reduced the script file by more than 280 lines of code</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Developer Log & Wireframe</h1>
+      <ul>
+        <li><p>The developer log I wrote while working on this project can be found <a href="https://docs.google.com/document/d/1bZKHxkwwpi6m7Pe5aHMEFJIM62siRdowYAh1XV8M5ow/edit?usp=sharing">here</a></p></li>
+        <li><p>These are wireframe images that outline the structure and functionality of the application and show its interface on each of the three different device types: 
+          <ol>
+            <li><p><a href="https://drive.google.com/file/d/1BP4BWHBSauc1Es5fUFeIiudSbMBMBVse/view?usp=sharing">PC</a></p></li>
+            <li><p><a href="https://drive.google.com/file/d/1bgjj8oLsYH_lfQvKfGo3Lv1cZb_4wVhJ/view?usp=sharing">Tablet</a></p></li>
+            <li><p><a href="https://drive.google.com/file/d/1Tmnemvdmg5Y1QiD1cDRpeqeG3PIAYoD1/view?usp=sharing">Mobile Phone</a></p></li>
+          </ol>
+        </p></li>
+      </ul>
     </div>
   </div>
   <footer id="myFooter">
