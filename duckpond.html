@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
-p {font-size: 20px;}
+html,body,h1,h2,h3,h4,h5,h6,button {font-family: Inter, Helvetica;}
+p, li {font-size: 20px;}
 #myBtn {
   display: none;
   position: fixed;
@@ -23,11 +23,10 @@ p {font-size: 20px;}
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: rgb(102, 51, 153);
   color: white;
   cursor: pointer;
   padding: 15px;
-  border-radius: 4px;
 }
 #myBtn:hover {
   background-color: #555;
@@ -35,9 +34,9 @@ p {font-size: 20px;}
 .thumbnail img {
     max-height: 450px;
 }
-a {
-    text-decoration: none;
-    color: rgb(33, 37, 41);
+a:has(.caption) {
+  text-decoration: none;
+  color: rgb(33, 37, 41);
 }
 </style>
 </head>
@@ -348,27 +347,85 @@ a {
   </div>
 </div>
 <div class="w3-main">
-  <div class="w3-row w3-padding-64">
+  <div class="w3-row w3-padding-top-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1 class="w3-text-deep-purple">Description</h1>
+      <ul>
+        <li><p>Full-Stack social network application modeled on existing platforms like Twitter and Instagram</p></li>
+        <li><p>DuckPond is an example of a 3-tier MERN (MongoDB, Express, React, Node.js) full-stack architecture</p></li>
+        <li><p>Users can create new accounts on DuckPond, and sign in at any time with valid credentials</p></li>
+        <li><p>Every user has a Profile which they can update at any time with new personal information, such as a profile image, biography, country of residence, etc.</p></li>
+        <li><p>The main page of DuckPond is a Feed page that holds all the active posts from all users who are registered to the social network. Feed page provides all the typical social media features, from liking and commenting on other people's posts, to deleting or editing one's own posts (not those from other users however)</p></li>
+        <li><p>Furthermore, users can make new posts, search for other users on the network, change the app theme, sign out, and also delete their accounts if they so decide</p></li>
+        <li><p>DuckPond is a responsive application, and its interface can be accessed from both a desktop machine and a mobile phone</p></li>
+        <li><p>Code for this project was written in JavaScript, HTML, and CSS languages</p></li>
+        <li><p>The technology stack utilized for this project was MERN (MongoDB, Express, React, and Node.js)</p></li>
+        <li><p>The editor used for the project was Visual Studio Code, version control was done with Git, Figma and Whimsical were used for visual outlines (wireframes) and flowcharts</p></li>
+        <li><p>Bulma was our CSS framework of choice</p></li>
+        <li><p>Both Insomnia and Postman were utilized for API endpoint testing (on the backend). However, we decided to make our own API testing tool that would support automated testing, and we developed it in Python using the pytest framework. The repository of this automated testing tool written in Python can be accessed <a href="https://github.com/kristijanH1998/ddsm-backend-testing-tool.git">here</a></p></li>
+        <li><p>Hackolade was employed for making data models, Entity Relationship (ER) diagrams, and schema designs for collections and documents of our MongoDB database</p></li>
+        <li><p>To connect frontend layer of the application to backend logic, we utilized Axios API for sending HTTP requests to the backend server</p></li>
+        <li><p>Font Awesome toolkit was used for fonts and icons on the application's website (frontend)</p></li>
+        <li><p>An extra step that has also been taken was containerization of the project with Docker, to achieve OS-level virtualization and make it easier for end users to test DuckPond without having to install a lot of environment dependencies, packages, libraries, etc.</p></li>
+      </ul>
     </div>
   </div>
-  <div class="w3-row">
+  <div class="w3-row w3-padding-top-32">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1 class="w3-text-deep-purple">Challenges</h1>
+      <ul>
+        <li><p>Prior to starting this project, I was not very much experienced in backend development and using MERN technology stack, more specifically using Express as server-side framework, Node as a JavaScript runtime environment (server platform), and MongoDB as database. I only had knowledge of React for frontend development. Furthermore, MongoDB is a NoSQL database system, and before this project I only worked in SQL-type databases and database management systems for those (I had experience with MySQL). The tools used for backend development in MERN stack, like MongoDB Compass, API test tools (Insomnia, Postman), and Hackolade were new to me as well. Therefore, I needed several weeks of both research and hands-on practice to familiarize myself with this software stack, but I managed to catch up pretty fast with the rest of the team</p></li>
+        <li><p>The integration of the frontend code to the backend side of the application was by far the most time-consuming and difficult phase of building DuckPond, as it exposed bugs in both parts of the project that were previously not detected nor found to possibly cause issues in the future. This meant going back to backend code and making changes to it (introducing new endpoints or editing existing ones, fixing errors with data retrieved by endpoints, etc.), and sometimes editing and upgrading already finished and tested frontend code when it would be missing certain elements or React components</p></li>
+        <li><p>Axios library used for sending HTTP requests from the frontend to the backend server was initally causing CORS errors and failed to fetch data from the database. This issue required several days of research and debugging followed by several days of trial-and-error attempts to make all endpoint types return desired data from the database</p></li>
+        <li><p>Forgot Password functionality has not yet been implemented due to Mailgun API and Gmail API not producing expected results, since these solutions required both the sender and recipient of email messages to change certain email account security settings. Gmail did not work as desired with Nodemailer module for Node.js. These problems caused our application to, as of the time of writing this description, be missing Forgot Password service for resetting user password</p></li>
+      </ul>
+      </div>
+  </div>
+  <div class="w3-row w3-padding-top-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-deep-purple">Motivation</h1>
+      <ul>
+        <li><p>I was assigned this project while participating in the Bay Valley Tech's internship program, and I was looking forward to it because I needed more experience in full-stack application development. I also wanted to add new technologies to my portfolio stack, like MongoDB, Express, Node.js, Bulma, Postman, and others, and this project was a great opportunity for me to learn them</p></li>
+      </ul>
     </div>
   </div>
-  <div class="w3-row w3-padding-64">
+  <div class="w3-row w3-padding-top-32">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1 class="w3-text-deep-purple">What I Learned</h1>
+      <ul>
+        <li><p>This almost 3 months long project taught me that good methodology, team organization, and effective leadership are crucial components of any software engineering process</p></li>
+        <li><p>I learned that even if one is not very familiar with certain set of technologies, they can still be productive in a team project that requires knowledge of those technologies if they put enough effort in learning them by both reading documentation and other study materials, and being willing to immerse themselves in practical work even if initial attempts are filled with setbacks. The most important thing is to never give up, learn from mistakes, and keep trying without thinking about results</p></li>
+        <li><p>Lastly, I realized that medium to large scale software projects like DuckPond are very time consuming and in order to be completed within a couple of months, they should be performed by teams of developers and engineers. The same goes for any larger full-stack application. Perhaps such projects can be finished by a single person, but that process would take considerably more time than team work would require to deliver the product and finalize all the steps in the process</p></li>
+      </ul>
     </div>
   </div>
+  <div class="w3-row w3-padding-top-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-deep-purple">Tests</h1>
+      <ul>
+        <li><p>At the initial stages of development, we used Insomnia and Postman to test API endpoints for all HTTP methods (GET, POST, PUT, and DELETE) that are used for communication with the backend server</p></li>
+        <li><p>Due to problems with automating tests in both Insomnia and Postman, the team decided to make our own automated testing program in Python. This program, when run, activates all the endpoints on the server and sends requests for communication with the database for each of them. If all tests run successfully, it means the backend part of DuckPond is fully operational</p></li>
+        <li><p>The repository of our Python automated test tool can be found <a href="https://github.com/kristijanH1998/ddsm-backend-testing-tool.git">here</a>. Browse the README file for more information and screenshots of this subproject</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-deep-purple">Repository Links, Developer Log, Flowcharts, Wireframe</h1>
+      <ul>
+        <li><p><a href="https://github.com/kristijanH1998/dev-duckies-sm-proj-front.git">GitHub Repository (Frontend)</a></p></li>
+        <li><p><a href="https://github.com/kristijanH1998/ddsm-back-end.git">GitHub Repository (Backend)</a></p></li>
+        <li><p><a href="https://github.com/kristijanH1998/ddsm-backend-testing-tool.git">GitHub Repository (Automated Testing Tool)</a></p></li>
+        <li><p>My developer log for this project has been uploaded <a href="https://drive.google.com/file/d/1bIH4XZXU69Ym8tr6hukK0defAdZk_hYE/view?usp=sharing">here</a></p></li>
+        <li><p>The flowcharts I made in Whimsical for Login and Register endpoints, deleting, updating, and getting data on user's Profile page or Feed page, account deletion, and other API methods can be seen on <a href="https://whimsical.com/api-fZfurRkTG76GxAbwypZCt">this link</a></p></li>
+        <li><p>The wireframe schematics I made in Figma for Login and Register pages is shown <a href="https://www.figma.com/design/jj1JsWoJYqUOrp8FJDnOSf/Login%2FRegister-page-wireframes?node-id=0-1&t=qn4lK3Ey3o9NGknh-1">here</a>. The wireframe for the Feed and Profile pages and Post modal are uploaded <a href="https://www.figma.com/design/2mC4Kt2an5EqkLJgBYSSzh/Feed%2FProfile-Page-%26-Post-Modal-Wireframes?node-id=0-1&t=bvvqA0HnTnpx0N5X-1">here</a></p></li>
+      </ul>
+    </div>
+  </div>
+  
+
+
+
   <footer id="myFooter">
     <div class="w3-container w3-theme-l2 w3-padding-32">
       <h4>Questions about the project? Contact me: <br><br> +1 (209) 485-8648 <br><br> kristijan.hornung1@gmail.com</h4>
