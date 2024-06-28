@@ -31,6 +31,18 @@ p, li {font-size: 20px;}
 #myBtn:hover {
   background-color: #555;
 }
+#tryBtn {
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(102, 51, 153);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  margin: 30px;
+  position: relative;
+  left: 30px;
+}
 .thumbnail img {
     max-height: 650px;
 }
@@ -163,9 +175,13 @@ a:has(.caption) {
   </div>
 </div>
 <div class="w3-main">
-  <div class="w3-row w3-padding-64">
+  <div class="w3-row w3-padding-top-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Description</h1>
+      <a href="https://email-app-kh.netlify.app/">
+        <button id="tryBtn" title="Try App Online">Try Online on Netlify</button>
+      </a>
+      <p><strong>Note: to see the source code and read a more detailed story about the project, including how to run and use the app on your computer, and potential future additions to the application, consult the README file in the project's <a href="https://github.com/kristijanH1998/bootstrap-email-hornung.git">GitHub Repository</a></strong></p>
+      <h1 class="w3-text-deep-purple">Description</h1>
       <ul>
         <li><p>Responsive email template and design made in JavaScript/HTML/CSS with Bootstrap framework and CSS Flexbox method</p></li> 
         <li><p>Visual Studio Code was used for code editing and Git for version control</p></li>  
@@ -174,26 +190,26 @@ a:has(.caption) {
       </ul>
     </div>
   </div>
-  <div class="w3-row">
+  <div class="w3-row w3-padding-top-32">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Challenges</h1>
+      <h1 class="w3-text-deep-purple">Challenges</h1>
       <ul>
         <li><p>The hardest part of making the HTML code structure was to make the template fully responsive for 3 different screen sizes using Bootstrap breakpoint classes, while at the same time maintaining functionality of toggle buttons, as well as the scrollable property of message list container and main message container</p></li>
         <li><p>Vertical navigation bar and its toggle property initially caused bugs on tablet and phone screen sizes, and it was particularly difficult to make extra small screen size (phone) template display only one container, be it message list container, main message container, or the vertical navigation bar as folder selection menu</p></li>
       </ul>
     </div>
   </div>
-  <div class="w3-row w3-padding-64">
+  <div class="w3-row w3-padding-top-32">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Motivation</h1>
+      <h1 class="w3-text-deep-purple">Motivation</h1>
       <ul>
         <li><p>I made this project to learn more about creating responsive webpages with Bootstrap, and also to improve my front-end development skills in JS/HTML/CSS</p></li>
       </ul>
     </div>
   </div>
-  <div class="w3-row w3-padding-64">
+  <div class="w3-row w3-padding-top-32">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">What I Learned</h1>
+      <h1 class="w3-text-deep-purple">What I Learned</h1>
       <ul>
         <li><p>This project taught me how to use Bootstrap breakpoint classes to make design components responsive to screens for different devices</p></li>
         <li><p>I also learned a lot about making user interfaces (UIs) as part of frontend development</p></li>
@@ -201,9 +217,9 @@ a:has(.caption) {
       </ul>
     </div>
   </div>
-  <div class="w3-row w3-padding-64">
+  <div class="w3-row w3-padding-32">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Developer Log & Wireframe</h1>
+      <h1 class="w3-text-deep-purple">Developer Log & Wireframe</h1>
       <ul>
         <li><p>The developer log I wrote while working on this project can be found <a href="https://docs.google.com/document/d/1bZKHxkwwpi6m7Pe5aHMEFJIM62siRdowYAh1XV8M5ow/edit?usp=sharing">here</a></p></li>
         <li><p>These are wireframe images that outline the structure and functionality of the application and show its interface on each of the three different device types: 
