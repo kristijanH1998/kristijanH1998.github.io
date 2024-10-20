@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>kristijanH1998: Full-Stack Reading App</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<style>
+html,body,h1,h2,h3,h4,h5,h6,button {font-family: Inter, Helvetica;}
+p, li {font-size: 20px;}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(102, 51, 153);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+#tryBtn {
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(102, 51, 153);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  margin: 30px;
+  position: relative;
+  left: 30px;
+}
+.thumbnail img {
+    max-height: 650px;
+}
+a:has(.caption) {
+  text-decoration: none;
+  color: rgb(33, 37, 41);
+}
+</style>
+</head>
+<body>
+  <div class="container w3-padding-top-64" style="max-height:75vh; overflow-y: auto;">
+    <h2>BookWorm: Full-Stack Reading Application</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="screenshots/bookworm/login.png" target="_blank">
+            <img src="screenshots/bookworm/login.png" alt="Screenshot 1" style="width:100%">
+            <div class="caption">
+              <p>Login Page</p>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail">
+          <a href="screenshots/bookworm/home2.png" target="_blank">
+            <img src="screenshots/bookworm/home2.png" alt="Screenshot 4" style="width:100%">
+            <div class="caption">
+              <p>Searching by title 'Don Quixote', and returned results in the list below</p>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail">
+          <a href="screenshots/bookworm/home5.png" target="_blank">
+            <img src="screenshots/bookworm/home5.png" alt="Screenshot 7" style="width:100%">
+            <div class="caption">
+              <p>Adding a book to the list of Favorites</p>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail">
+            <a href="screenshots/bookworm/mybooks2.png" target="_blank">
+              <img src="screenshots/bookworm/mybooks2.png" alt="Screenshot 10" style="width:100%">
+              <div class="caption">
+                <p>Deleting a book from one of three category lists on My Books page</p>
+              </div>
+            </a>
+          </div>
+          <div class="thumbnail">
+            <a href="screenshots/bookworm/myprofile3.png" target="_blank">
+              <img src="screenshots/bookworm/myprofile3.png" alt="Screenshot 13" style="width:100%">
+              <div class="caption">
+                <p>User's password updated</p>
+              </div>
+            </a>
+          </div>
+          <div class="thumbnail">
+            <a href="screenshots/bookworm/postman2.png" target="_blank">
+              <img src="screenshots/bookworm/postman2.png" alt="Screenshot 16" style="width:100%">
+              <div class="caption">
+                <p>Testing the /fav-books endpoint in Postman which returns a list of user's favorite books</p>
+              </div>
+            </a>
+          </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="screenshots/bookworm/register.png" target="_blank">
+            <img src="screenshots/bookworm/register.png" alt="Screenshot 2" style="width:100%">
+            <div class="caption">
+              <p>Register Page</p>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail">
+          <a href="screenshots/bookworm/home3.png" target="_blank">
+            <img src="screenshots/bookworm/home3.png" alt="Screenshot 5" style="width:100%">
+            <div class="caption">
+              <p>Google Embedded Viewer window launched by clicking the 'Read' button of a book</p>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail">
+          <a href="screenshots/bookworm/home6.png" target="_blank">
+            <img src="screenshots/bookworm/home6.png" alt="Screenshot 8" style="width:100%">
+            <div class="caption">
+              <p>Error message when trying to favorite the book that is already in the list of Favorites</p>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail">
+            <a href="screenshots/bookworm/myprofile1.png" target="_blank">
+              <img src="screenshots/bookworm/myprofile1.png" alt="Screenshot 11" style="width:100%">
+              <div class="caption">
+                <p>My Profile page with actively signed in user's account information and update fields</p>
+              </div>
+            </a>
+        </div>
+        <div class="thumbnail">
+            <a href="screenshots/bookworm/jwt.png" target="_blank">
+              <img src="screenshots/bookworm/jwt.png" alt="Screenshot 14" style="width:100%">
+              <div class="caption">
+                <p>JWT user authentication key stored in local storage</p>
+              </div>
+            </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="screenshots/bookworm/home1.png" target="_blank">
+            <img src="screenshots/bookworm/home1.png" alt="Screenshot 3" style="width:100%">
+            <div class="caption">
+              <p>Home Page for searching Google Books database</p>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail">
+          <a href="screenshots/bookworm/home4.png" target="_blank">
+            <img src="screenshots/bookworm/home4.png" alt="Screenshot 6" style="width:100%">
+            <div class="caption">
+              <p>Reading the selected text</p>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail">
+          <a href="screenshots/bookworm/mybooks1.png" target="_blank">
+            <img src="screenshots/bookworm/mybooks1.png" alt="Screenshot 9" style="width:100%">
+            <div class="caption">
+              <p>My Books page with three categories: Favorites, Finished Reading, and Wishlist</p>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail">
+            <a href="screenshots/bookworm/myprofile2.png" target="_blank">
+                <img src="screenshots/bookworm/myprofile2.png" alt="Screenshot 12" style="width:100%">
+                <div class="caption">
+                    <p>Message indicating user's Date of Birth has been changed</p>
+                </div>
+            </a>
+        </div>
+        <div class="thumbnail">
+            <a href="screenshots/bookworm/postman1.png" target="_blank">
+                <img src="screenshots/bookworm/postman1.png" alt="Screenshot 15" style="width:100%">
+                <div class="caption">
+                    <p>Testing the /update-user endpoint in Postman by updating user's Date of Birth value in the database</p>
+                </div>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">Home</a>
+  </div>
+</div>
+<div class="w3-main">
+  <div class="w3-row w3-padding-top-64">
+    <div class="w3-twothird w3-container">
+      <a href="https://email-app-kh.netlify.app/">
+        <button id="tryBtn" title="Try App Online">Try Online on Netlify</button>
+      </a>
+      <p><strong>Note: to see the source code and read a more detailed story about the project, including how to run and use the app on your computer, and potential future additions to the application, consult the README file in the project's <a href="https://github.com/kristijanH1998/bootstrap-email-hornung.git">GitHub Repository</a></strong></p>
+      <h1 class="w3-text-deep-purple">Description</h1>
+      <ul>
+        <li><p>Responsive email template and design made in JavaScript/HTML/CSS with Bootstrap framework and CSS Flexbox method</p></li> 
+        <li><p>Visual Studio Code was used for code editing and Git for version control</p></li>  
+        <li><p>This is a front-end web email application with interactivity that allows users to browse various email message categories (in folders such as Inbox, Tagged, Drafts, etc.), write new messages with specified recipient and subject, reply to messages in each folder, toggle the vertical navigation bar, and search for messages in the search bar. All this can be done with maximum level of responsiveness to changes in screen size, and all components are vertically scrollable</p></li>
+        <li><p>This application is entirely responsive and supports mobile device view, tablet/half screen view, and fullscreen desktop view (for PCs)</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="w3-row w3-padding-top-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-deep-purple">Challenges</h1>
+      <ul>
+        <li><p>The hardest part of making the HTML code structure was to make the template fully responsive for 3 different screen sizes using Bootstrap breakpoint classes, while at the same time maintaining functionality of toggle buttons, as well as the scrollable property of message list container and main message container</p></li>
+        <li><p>Vertical navigation bar and its toggle property initially caused bugs on tablet and phone screen sizes, and it was particularly difficult to make extra small screen size (phone) template display only one container, be it message list container, main message container, or the vertical navigation bar as folder selection menu</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="w3-row w3-padding-top-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-deep-purple">Motivation</h1>
+      <ul>
+        <li><p>I made this project to learn more about creating responsive webpages with Bootstrap, and also to improve my front-end development skills in JS/HTML/CSS</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="w3-row w3-padding-top-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-deep-purple">What I Learned</h1>
+      <ul>
+        <li><p>This project taught me how to use Bootstrap breakpoint classes to make design components responsive to screens for different devices</p></li>
+        <li><p>I also learned a lot about making user interfaces (UIs) as part of frontend development</p></li>
+        <li><p>Coming back to the project a couple months after it was finished, I realized that I can apply DRY (Don't Repeat Yourself) principle to the script.js by replacing repetitive .onclick event listener code for each button in the vertical navigation bar (for each message folder) with a more abstract single for loop that creates a click listener for all of those buttons, and opens corresponding sections for message list and message container. This optimization reduced the script file by more than 280 lines of code</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-deep-purple">Developer Log & Wireframe</h1>
+      <ul>
+        <li><p><a href="https://github.com/kristijanH1998/bootstrap-email-hornung.git">GitHub repository link</a></p></li>
+        <li><p>The developer log I wrote while working on this project can be found <a href="https://docs.google.com/document/d/1bZKHxkwwpi6m7Pe5aHMEFJIM62siRdowYAh1XV8M5ow/edit?usp=sharing">here</a></p></li>
+        <li><p>These are wireframe images that outline the structure and functionality of the application and show its interface on each of the three different device types: 
+          <ol>
+            <li><p><a href="https://drive.google.com/file/d/1BP4BWHBSauc1Es5fUFeIiudSbMBMBVse/view?usp=sharing">PC</a></p></li>
+            <li><p><a href="https://drive.google.com/file/d/1bgjj8oLsYH_lfQvKfGo3Lv1cZb_4wVhJ/view?usp=sharing">Tablet</a></p></li>
+            <li><p><a href="https://drive.google.com/file/d/1Tmnemvdmg5Y1QiD1cDRpeqeG3PIAYoD1/view?usp=sharing">Mobile Phone</a></p></li>
+          </ol>
+        </p></li>
+      </ul>
+    </div>
+  </div>
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Questions about the project? Contact me: <br><br> +1 (209) 485-8648 <br><br> kristijan.hornung1@gmail.com</h4>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    </div>
+  </footer>
+</div>
+<script>
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>
