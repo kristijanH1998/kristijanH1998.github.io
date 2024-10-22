@@ -212,7 +212,16 @@ a:has(.caption) {
       <p><strong>Note: to see the source code and read a more detailed story about the project, including how to run and use the app on your computer, and potential future additions to the application, consult the README file in the project's GitHub <a href="https://github.com/kristijanH1998/bookworm.git">Frontend Repository</a> or <a href="https://github.com/kristijanH1998/bookworm-backend.git">Backend Repository</a></strong></p>
       <h1 class="w3-text-deep-purple">Description</h1>
       <ul>
-        <li><p>Test</p></li> 
+        <li><p>Full-Stack book reading web application that lets users browse and select books from the Google Books digital database by communicating with Google Books API.</p></li> 
+        <li><p>Searching of book records can be performed by three criteria: title, author name(s), and ISBN.</p></li>
+        <li><p>BookWorm employs Google's Embedded Viewer API to display selected book's text on the screen for reading, within an Embedded Viewer window.</p></li>
+        <li><p>The application also provides information about literary works from Google's database, and lets users perform CRUD operations on their profiles by updating their account data.</p></li>
+        <li><p>Books can be placed into one or more of three categories: Favorites, Finished Reading, and Wishlist for future reading.</p></li>
+        <li><p>The application maintains high level of security by employing hashed passwords (using bcrypt library), SQL injection prevention by means of name placeholders in SQL queries of requests sent from backend to the MySQL database, JWT token for user authentication, and other important security aspects.</p></li>
+        <li><p>BookWorm's frontend was built on Arch Linux system in TypeScript, React.js, HTML5, CSS3, and Bootstrap, with help of tools like VS Code (for code editing), Figma (for wireframes), and Git (for software version control).</p></li>
+        <li><p>The backend portion was developed in JavaScript using Node.js, Express.js, MySQL (MariaDB) and the tools utilized were VS Code, Postman (for backend testing), and Git on a Linux system.</p></li>
+        <li><p>React Router is used on the frontend for page routing, Axios HTTP client library is used for sending REST API requests to the backend web server, while Google Books API receives requests from the backend, which backend receives from the frontend.</p></li>
+        <li><p>The backend handles data transfer to and from the MySQL database managed with MySQL Workbench. Backend utilizes Express.js as server framework, bcrypt library for password hashing, CORS for application integration, JWT keys for authentication, and body-parser libary for HTTP request parsing.</p></li>
       </ul>
     </div>
   </div>
