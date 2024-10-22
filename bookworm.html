@@ -212,6 +212,7 @@ a:has(.caption) {
       <p><strong>Note: to see the source code and read a more detailed story about the project, including how to run and use the app on your computer, and potential future additions to the application, consult the README file in the project's GitHub <a href="https://github.com/kristijanH1998/bookworm.git">Frontend Repository</a> or <a href="https://github.com/kristijanH1998/bookworm-backend.git">Backend Repository</a></strong></p>
       <h1 class="w3-text-deep-purple">Description</h1>
       <ul>
+        <li><p>This is the first full-stack software project I developed independently on my own.</p></li>
         <li><p>Full-Stack book reading web application that lets users browse and select books from the Google Books digital database by communicating with Google Books API.</p></li> 
         <li><p>Searching of book records can be performed by three criteria: title, author name(s), and ISBN.</p></li>
         <li><p>BookWorm employs Google's Embedded Viewer API to display selected book's text on the screen for reading, within an Embedded Viewer window.</p></li>
@@ -221,7 +222,7 @@ a:has(.caption) {
         <li><p>BookWorm's frontend was built on Arch Linux system in TypeScript, React.js, HTML5, CSS3, and Bootstrap, with help of tools like VS Code (for code editing), Figma (for wireframes), and Git (for software version control).</p></li>
         <li><p>The backend portion was developed in JavaScript using Node.js, Express.js, MySQL (MariaDB) and the tools utilized were VS Code, Postman (for backend testing), and Git on a Linux system.</p></li>
         <li><p>React Router is used on the frontend for page routing, Axios HTTP client library is used for sending REST API requests to the backend web server, while Google Books API receives requests from the backend, which backend receives from the frontend.</p></li>
-        <li><p>The backend handles data transfer to and from the MySQL database managed with MySQL Workbench. Backend utilizes Express.js as server framework, bcrypt library for password hashing, CORS for application integration, JWT keys for authentication, and body-parser libary for HTTP request parsing.</p></li>
+        <li><p>The backend handles data transfer to and from the MySQL relational database managed with MySQL Workbench. Backend utilizes Express.js as server framework, bcrypt library for password hashing, CORS for application integration, JWT keys for authentication, and body-parser libary for HTTP request parsing.</p></li>
       </ul>
     </div>
   </div>
@@ -229,7 +230,60 @@ a:has(.caption) {
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-deep-purple">Challenges</h1>
       <ul>
-        <li><p>Test</p></li>
+        <li><p>A particularly challenging part of development was including Google Books Embedded API viewer canvas on the Search Books page: TypeScript compiler initially
+          threw errors indicating it does not recognize 'google' in 'google.books.load();' with messages 'Cannot find name 'google'' and 'google.books.load is not a function', and other errors with 'google' object's associated functions and classes ('.books' class, 'load()' method, etc.). 
+          This issue was mitigated by adding the following lines: <br>
+          <xmp><script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script></xmp> in index.html, and<br>
+          <xmp>declare var google: any;</xmp> in Home.tsx; <br>
+          it is not enough to just write these lines of code in Home.tsx before calling 'google.books.load();':
+          <xmp>
+            const script = document.createElement('script');
+            script.src = "https://www.google.com/books/jsapi.js";
+            script.type = "text/javascript"
+            document.body.appendChild(script);
+          </xmp>
+          it was necessary to also include the jsapi.js script in the script tag in index.html, and have 'declare var google: any;' in Home.tsx, as shown above.</p></li>
+        <li><p>Another issue happened in this segment of code in Home.tsx (Search books webpage):
+          <xmp>"useEffect(() => {
+                  if(page >= 0) {
+                      acquireJwt();
+                      // console.log(searchPhrase)
+                      axios
+                          .get("http://localhost:3000/search-books", {
+                            headers: {"authorization": "Bearer " + jwt}, 
+                            params: {"search-terms": searchPhrase, criteria: searchPlaceholder, page: page * 10}})
+                          .then((res) => {
+                              if (res.data.success) {
+                                  // console.log(res.data.data.items)
+                                  // console.log(typeof res.data.data.items)
+                                  setBookList(res.data.data.items)
+                                  console.log(bookList)
+                              } 
+                          })
+                          .catch((error) => {
+                              console.log(error.response.data.error)
+                          });
+                  }
+                  console.log(page)
+               
+              }, [page])"
+          </xmp>
+          This threw an error from the backend complaining about jwt key not being provided, 
+          because jwt key could not be fetched from local storage before /search-books endpoint is called, 
+          as it is called immediately on page load since page=0 right from the start. 
+          This made it impossible to send the /search-books request above whenever the condition page>=0 was 
+          true; it was only functional when page>0 condition was required, since by the time user
+          clicks on 'Next' button and increments value of page, jwt is already fetched from local storage and 
+          available, and endpoint request can be successful. This bug was fixed by including 'jwt' as 
+          condition in the if statement (like this: "if(jwt && page >= 0)"), since jwt was now first checked 
+          for value inside it and whether it was undefined before the /search-books endpoint request is sent.
+        </p></li>
+        <li><p>
+          Another obstacle was when GET HTTP requests worked normally, but POST HTTP requests would send 
+          authorization error saying the authorization header content was undefined. This was fixed by 
+          following rules for POST request type, stating that Authorization header must come after the 
+          data parameter, unlike in GET type requests.
+        </p></li>
       </ul>
     </div>
   </div>
